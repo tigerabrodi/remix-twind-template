@@ -9,12 +9,9 @@ import { twindConfig } from "../../twind.config";
 import { renderToString } from "react-dom/server";
 
 declare global {
-  function myFunction(): boolean;
   var __sheet: VirtualSheet;
   var __cssByHash: Record<string, string>;
 }
-
-globalThis.myFunction = () => true;
 
 const styleContext = React.createContext<string>("");
 
